@@ -1,6 +1,8 @@
-/***********************************/
-/* Below 1344px (smaller desktops) */
-/***********************************/
+/* rem and em do NOT depend on html font-size in media queries! Instead, 1rem = 1em = 16px */
+
+/**************************/
+/* BELOW 1344px (Smaller desktops) */
+/**************************/
 
 @media (max-width: 84em) {
   .hero {
@@ -16,13 +18,13 @@
   }
 }
 
-/***********************************/
-/* Below 1200px (landscape tablets) */
-/***********************************/
+/**************************/
+/* BELOW 1200px (Landscape Tablets) */
+/**************************/
 
 @media (max-width: 75em) {
   html {
-    /* 9px / 16px = 0.5625 = 56.25% */
+    /* 9px / 16px  */
     font-size: 56.25%;
   }
 
@@ -56,11 +58,11 @@
   }
 }
 
-/***********************************/
-/* Below 928px ( tablets) */
-/***********************************/
+/**************************/
+/* BELOW 944px (Tablets) */
+/**************************/
 
-@media (max-width: 58em) {
+@media (max-width: 59em) {
   html {
     /* 8px / 16px = 0.5 = 50% */
     font-size: 50%;
@@ -73,14 +75,9 @@
   }
 
   .hero-text-box,
-  .hero-image-box {
+  .hero-img-box {
     text-align: center;
   }
-
-  /* .delivered-meals {
-    justify-content: center;
-    margin-top: 3.2rem;
-  } */
 
   .hero-img {
     width: 60%;
@@ -91,10 +88,6 @@
     margin-top: 3.2rem;
   }
 
-  /* .heading-featured-in {
-    font-size: 1.2rem;
-  } */
-
   .logos img {
     height: 2.4rem;
   }
@@ -104,8 +97,7 @@
   }
 
   .meal-content {
-    padding: 3.2rem;
-    padding-top: 2.4rem;
+    padding: 2.4rem 3.2rem 3.2rem 3.2rem;
   }
 
   .section-testimonials {
@@ -117,6 +109,7 @@
   }
 
   .cta {
+    /* 3/5 = 60% + 2/5 = 40% */
     grid-template-columns: 3fr 2fr;
   }
 
@@ -129,12 +122,12 @@
   }
 
   /* MOBILE NAVIGATION */
-  .button-mobile-nav {
+  .btn-mobile-nav {
     display: block;
   }
 
   .main-nav {
-    background-color: rgb(255, 255, 255, 0.97);
+    background-color: rgba(255, 255, 255, 0.97);
     position: absolute;
     top: 0;
     left: 0;
@@ -148,10 +141,13 @@
     transition: all 0.5s ease-in;
 
     /* Hide navigation */
+    /* Allows NO transitions at all */
+    /* display: none; */
+
     /* 1) Hide it visually */
     opacity: 0;
 
-    /* 2) Make inaccessible to mouse and keyboard */
+    /* 2) Make it unaccessible to mouse and keyboard */
     pointer-events: none;
 
     /* 3) Hide it from screen readers */
@@ -180,13 +176,13 @@
 
   .main-nav-link:link,
   .main-nav-link:visited {
-    font-size: 3.2rem;
+    font-size: 3rem;
   }
 }
 
-/***********************************/
-/* Below 704px (smaller tablets) */
-/***********************************/
+/**************************/
+/* BELOW 704px (Smaller tablets) */
+/**************************/
 
 @media (max-width: 44em) {
   .grid--3-cols,
@@ -223,9 +219,9 @@
   }
 }
 
-/***********************************/
+/**************************/
 /* BELOW 544px (Phones) */
-/***********************************/
+/**************************/
 
 @media (max-width: 34em) {
   .grid {
@@ -244,12 +240,12 @@
     padding: 2.4rem 1.6rem;
   }
 
-  .hero {
-    padding: 0 3.2rem;
-  }
-
   .section-hero {
     padding: 2.4rem 0 6.4rem 0;
+  }
+
+  .hero {
+    padding: 0 3.2rem;
   }
 
   .hero-img {
@@ -294,8 +290,11 @@
     grid-row: 1;
   }
 }
-/* - Font Sizes (px):
-10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98 */
 
-/* - Spacing system (px)
-2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128 */
+/* 
+- Font sizes (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+
+- Spacing system (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+*/
